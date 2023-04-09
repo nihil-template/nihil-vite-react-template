@@ -3,7 +3,7 @@ import { useMutation } from '@tanstack/react-query';
 import { IMutationParameter, IMutationType } from '@/types/queries.types';
 import { apiPost } from '@/utils/axios';
 
-export const useCreate = <T, P>(input: IMutationParameter): IMutationType<T, P> => {
+export const usePost = <T, P>(input: IMutationParameter): IMutationType<T, P> => {
   const {
     mutate, isLoading, isError, error, isSuccess,
   } = useMutation<T, AxiosError, P>(

@@ -3,7 +3,7 @@ import { AxiosError } from 'axios';
 import { IQueryParameter, IQueryType } from '@/types/queries.types';
 import { apiGet } from '@/utils/axios';
 
-export const useFindById = <T>(input: IQueryParameter<T>):IQueryType<T> => {
+export const useGetAny = <T>(input: IQueryParameter<T>): IQueryType<T> => {
   const {
     data = {}, isLoading, isError, error, isSuccess, refetch,
   } = useQuery<T, AxiosError>(
@@ -13,9 +13,7 @@ export const useFindById = <T>(input: IQueryParameter<T>):IQueryType<T> => {
 
       return data;
     },
-    {
-      ...input.options,
-    }
+    input.options
   );
 
   return {
