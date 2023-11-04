@@ -1,18 +1,23 @@
 import React, { useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import tw, { css } from 'twin.macro';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppLayout } from '@/layouts';
-import { AppDispatch, RootState } from '@/store';
-import { changeWord } from '@/reducers/TestReducer';
+import { AppLayout } from '@/src/layouts';
+import { useAppDispatch, useAppSelector } from '../hooks/rtk';
+import { setWord } from '../reducers/example.reducer';
 
 export function TestPage() {
-  const word = useSelector((state: RootState) => state.test.word);
-  const dispatch = useDispatch<AppDispatch>();
+  const word = useAppSelector(
+    (state) => state.example.word
+  );
+  const dispatch = useAppDispatch();
 
   const onClickWord = useCallback(() => {
-    dispatch(changeWord());
-  }, []);
+    const newWord = word === 'JavaScript'
+      ? 'TypeScript'
+      : 'JavaScript';
+
+    dispatch(setWord(newWord));
+  }, [ word, ]);
 
   const style = {
     default: css([

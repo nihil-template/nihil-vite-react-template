@@ -1,5 +1,5 @@
 import Cookies, { CookieSetOptions, CookieGetOptions } from 'universal-cookie';
-import { ICookies } from '@/types/dto.types';
+import { ICookies } from '@/src/types/dto.types';
 
 const cookies = new Cookies();
 

@@ -1,4 +1,4 @@
-import { ISiteData } from '@/types/site.types';
+import { ISiteData } from '@/src/types/site.types';
 
 export const siteData: ISiteData = {
   title: '리액트 템플릿',

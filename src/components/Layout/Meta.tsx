@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { IMetaData } from '@/types/site.types';
-import { siteData } from '@/data/siteData';
+import { IMetaData } from '@/src/types/site.types';
+import { siteData } from '@/src/data/siteData';
 
 interface IMetaProps {
   meta: IMetaData;
