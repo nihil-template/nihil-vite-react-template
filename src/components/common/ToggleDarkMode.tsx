@@ -3,7 +3,7 @@
 import React, { useCallback } from 'react';
 import { ClassNameValue, twJoin } from 'tailwind-merge';
 import { Icon } from '@iconify/react';
-import { commonStore, setDarkMode } from '@/src/common';
+import { commonStore, setDarkMode } from '@/src/entities';
 
 interface Props {
   styles?: ClassNameValue;

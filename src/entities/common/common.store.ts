@@ -2,24 +2,25 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 type CommonState = {
-  test: string;
+  darkMode: boolean;
+  mainColor: string;
 };
 
 export const commonStore = create(
   persist<CommonState>(
     () => ({
-      test: '',
+      darkMode: false,
+      mainColor: '',
     }),
     {
-      name: 'project/common-state',
-      skipHydration: true,
+      name: 'fa/common-state',
       storage: createJSONStorage(() => localStorage),
     }
   )
 );
 
-export function setTest(value: string) {
+export function setDarkMode(value: boolean) {
   commonStore.setState({
-    test: value,
+    darkMode: value,
   });
 }
