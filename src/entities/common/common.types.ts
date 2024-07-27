@@ -35,3 +35,42 @@ export interface IConfigData {
   };
   version: string;
 }
+
+export interface DateInfo {
+  year: string;
+  nextYear: string;
+  prevYear: string;
+  month: string;
+  nextMonth: string;
+  prevMonth: string;
+  date: string;
+  day: number;
+  dayString: string;
+  hour: string;
+  minute: string;
+  endDate: string;
+}
+
+export interface CalendarMonthData {
+  date: string;
+  fullDate: string;
+  isActive: boolean,
+}
+
+export interface CalendarTimeData {
+  value: string;
+  label: string;
+}
+
+export interface CalendarTime {
+  hours: CalendarTimeData[];
+  minutes: CalendarTimeData[];
+}
+
+export interface MonthData {
+  nowDate: string;
+  nowTime: string;
+  now: string;
+  prev: string;
+  next: string;
+}

@@ -1,4 +1,4 @@
-import { IConfigData } from '@/src/common';
+import { IConfigData } from '@/src/entities';
 
 export const configData: IConfigData = {
   title: '사이트 이름',

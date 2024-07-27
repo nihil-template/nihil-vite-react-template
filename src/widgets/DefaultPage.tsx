@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppMain, Footer, Header } from '@/src/common';
+import { AppMain, Footer, Header } from '@/src/components';
 
 interface Props {
   children: React.ReactNode;

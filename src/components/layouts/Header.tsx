@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ClassNameValue, twJoin } from 'tailwind-merge';
-import { Logo, Nav } from '@/src/common';
+import { Logo, Nav } from '@/src/components';
 
 interface Props {
   styles?: ClassNameValue;
